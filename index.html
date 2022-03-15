@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Guessing Game</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
     <!-- the MAIN.CSS file is linked here -->
   </head>
 
   <body>
+    <div id="app" class="center container">
+      <div id="headers">
+        <h1 id=""title" class="center">Number Guessing Game</h1>
+        <h2 id="subtitle" class="center">Pick a number from 0 - 100</h2>
+      </div>
+      <div id="main">
+        <div id="input-parent">
+          <input
+            id="playerInput"
+            class="center"
+            placeholder="enter guess here"
+            maxlength="3"
+          />
+          <button id="submit" class="button" type="button">Submit Guess</button>
+        </div>
+      </div>
+      <h3>Previous Guesses</h3>
+      <!-- <p>One Guess Remaining, you are close!</p> -->
+      <div id="guesses">
+        <ul id="guessList">
+          <li class="guess">-</li>
+          <li class="guess">-</li>
+          <li class="guess">-</li>
+          <li class="guess">-</li>
+          <li class="guess">-</li>
+        </ul>
+      </div>
+      <div id="menu-btns-cont">
+        <button id="reset" class="button menu-btns" type="button">PLAY AGAIN</button>
+        <button id="hint" class="button menu-btns" type="button">HINT</button>
+      </div>
+    </div>
 
-
-
-
-
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+    <script src="../js/guessing-game.js"></script>
   </body>
-
 </html>
