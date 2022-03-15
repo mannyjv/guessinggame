@@ -69,6 +69,13 @@ class Game {
         else if (diff < 25) feedbackText = "You're lukewarm.";
         else if (diff < 50) feedbackText = "You're a bit chilly.";
         else feedbackText = "You're ice cold!";
+        //to make hint button appear only after player has made 3 guesses. Below are two methods for adding a class to that button element. THen in main.css we can define .hidden class
+        if (this.pastGuesses.length >= 3) {
+          // const hintButton = document.getElementById("hint");
+          // hintButton.className += " hidden";
+          let hintButton = document.getElementById("hint");
+          hintButton.classList.remove("hidden"); //this uses a method on the element object that makes it easier to add and remove classes from an element
+        }
       }
     }
 
@@ -111,6 +118,9 @@ function playGame() {
   const playAgainButton = document.getElementById("reset");
   playAgainButton.addEventListener("click", function () {
     game = newGame();
+
+    let hintButton = document.getElementById("hint");
+    hintButton.classList.add("hidden");
     document.querySelector("#subtitle").innerHTML =
       "Pick a number from 0 - 100";
     const listItems = document.getElementsByTagName("li");
@@ -121,11 +131,12 @@ function playGame() {
 
   const hintButton = document.getElementById("hint");
   hintButton.addEventListener("click", () => {
-    const hintArr = game.provideHint();
-    // console.log(hintArr, game.winningNumber);
-    document.querySelector(
-      "#subtitle"
-    ).innerHTML = `Maybe one of these? ${hintArr.join(", ")}`;
+    if (!game.gameOver) {
+      const hintArr = game.provideHint();
+      document.querySelector(
+        "#subtitle"
+      ).innerHTML = `Maybe one of these? ${hintArr.join(", ")}`;
+    }
   });
 }
 

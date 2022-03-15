@@ -82,3 +82,6 @@ ul {
   margin: 0 8px;
   padding: 5px 20px;
 }
+.hidden {
+  visibility: hidden;
+}
