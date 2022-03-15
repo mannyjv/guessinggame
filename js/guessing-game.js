@@ -88,11 +88,18 @@ class Game {
   }
 
   provideHint() {
-    const hintArr = [
-      this.winningNumber,
-      generateWinningNumber(),
-      generateWinningNumber(),
-    ];
+    const hintArr = [this.winningNumber];
+
+    while (hintArr.length < 3) {
+      let hintRandomNum = generateWinningNumber();
+
+      if (
+        !hintArr.includes(hintRandomNum) &&
+        !this.pastGuesses.includes(hintRandomNum)
+      ) {
+        hintArr.push(hintRandomNum);
+      }
+    }
 
     return shuffle(hintArr);
   }
