@@ -1,7 +1,3 @@
-/*
-In this file, you will also include the event listeners that are needed to interact with your HTML file when
-a user clicks a button or adds a guess to the input field.
-*/
 
 function generateWinningNumber() {
   // the math.random returns number between 0 and 1 with decimals, but not including 1. so if we do * 10, we will get number between 0 and 10(not including 10), but * 100 will give us a number up to 0-99 not including 100. it can be a two digit number. so in order to include 10 or 100, we add the + 1 at the end, for example if we returned a number that was .999, we would be able to turn it into 99.9 and the plus 1 will let us reach 100, so itd be 100.9, then we'd round down, and itd be 100.
