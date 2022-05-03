@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FullstackAcademy/guessing-game.git"
+    "url": "git+https://github.com/mannyjv/guessing-game"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FullstackAcademy/guessing-game/issues"
+    "url": "https://github.com/mannyjv/guessing-game"
   },
-  "homepage": "https://github.com/FullstackAcademy/guessing-game#readme",
+  "homepage": "https://mannyjv.github.io/guessing-game/",
   "devDependencies": {
     "testem": "^2.14.0"
   }
